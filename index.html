@@ -1,1 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>手势触控板</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#111111" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="status"><span class="dot" id="status-dot"></span> 正在连接...</div>
+  <div id="mouse-pad"><div id="mouse-pointer"></div></div>
+  <div id="gesture-pad"><div id="direction"></div></div>
 
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+</html>
